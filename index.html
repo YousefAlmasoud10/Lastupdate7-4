@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard Control</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .form-input {
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            width: calc(100% - 22px); /* Adjust width for padding and border */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leaderboard Control Panel</h1>
+    <a href="blue-team.html">blue</a>
+    <a href="red-team.html">Red</a>
+
+    <div>
+        <div class="form-input"><input type="text" id="name" placeholder="Name"></div>
+        <div class="form-input"><input type="number" id="score" placeholder="Score"></div>
+        <div class="form-input">
+            <select id="team">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+        <button class="button" onclick="submitEntry()">Add Entry</button>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
